@@ -1,3 +1,4 @@
 services:
   mongodb:
     build: ./mongodb
+    image: mongodb:v1
