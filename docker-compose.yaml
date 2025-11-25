@@ -1,4 +1,59 @@
 services:
+  
   mongodb:
     build: ./mongodb
     image: mongodb:v1
+    container_name: mongodb
+ 
+  redis:
+    build: ./redis
+    image: redis:v1
+    container_name: frontend
+
+  rabbitmq:
+    build: ./rabbitmq
+    image: rabbitmq:v1
+    container_name: rabbitmq
+
+  mysql:
+    build: ./mysql
+    image: mysql:v1    
+    container_name: mysql
+
+  
+  
+  
+
+  catalogue:
+    build: ./catalogue
+    image: catalogue:v1
+    container_name: catalogue
+
+  
+  shipping:
+    build: ./shipping
+    image: shipping:v1
+    container_name: shipping
+
+  cart:
+    build: ./cart
+    image: cart:v1
+    container_name: frontend
+
+  user:
+    build: ./user
+    image: user:v1
+    container_name: user
+
+  
+  payment:
+    build: ./payment
+    image: payment:v1
+    container_name: payment
+
+
+  frontend:
+    build: ./frontend
+    image: frontend:v1
+    container_name: frontend
+
