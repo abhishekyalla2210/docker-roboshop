@@ -8,7 +8,7 @@ services:
   redis:
     build: ./redis
     image: redis:v1
-    container_name: frontend
+    container_name: redis
 
   rabbitmq:
     build: ./rabbitmq
@@ -38,7 +38,7 @@ services:
   cart:
     build: ./cart
     image: cart:v1
-    container_name: frontend
+    container_name: cart
 
   user:
     build: ./user
