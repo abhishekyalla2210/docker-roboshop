@@ -50,7 +50,7 @@ services:
 
   user:
     build: ./user
-    image: user:v1
+    image: abhishekyalla/user:v1
     container_name: user
 
   
