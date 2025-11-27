@@ -2,28 +2,28 @@ services:
   
   mongodb:
     build: ./mongodb
-    image: mongodb:v1
+    image: abhishekyalla/mongodb:v1
     container_name: mongodb
     volumes:
       - mongodb:/data/db
  
   redis:
     build: ./redis
-    image: redis:v1
+    image: abhishekyalla/redis:v1
     container_name: redis
     volumes:
       - redis:/data
 
   rabbitmq:
     build: ./rabbitmq
-    image: rabbitmq:v1
+    image: abhishekyalla/rabbitmq:v1
     container_name: rabbitmq
     volumes:
       - rabbitmq:/var/lib/rabbitmq
 
   mysql:
     build: ./mysql
-    image: mysql:v1    
+    image: abhishekyalla/mysql:v1    
     container_name: mysql
     volumes:
     - mysql:/var/lib/mysql
@@ -34,18 +34,18 @@ services:
 
   catalogue:
     build: ./catalogue
-    image: catalogue:v1
+    image: abhishekyalla/catalogue:v1
     container_name: catalogue
 
   
   shipping:
     build: ./shipping
-    image: shipping:v1
+    image: abhishekyalla/shipping:v1
     container_name: shipping
 
   cart:
     build: ./cart
-    image: cart:v1
+    image: abhishekyalla/cart:v1
     container_name: cart
 
   user:
@@ -56,13 +56,13 @@ services:
   
   payment:
     build: ./payment
-    image: payment:v1
+    image: abhishekyalla/payment:v1
     container_name: payment
 
 
   frontend:
     build: ./frontend
-    image: frontend:v1
+    image: abhishekyalla/frontend:v1
     container_name: frontend
     ports:
       - "80:80"
@@ -70,7 +70,7 @@ services:
 networks:
   default:
    driver: bridge
-   name: roboshop
+   name: abhishekyalla/roboshop
    external: false
 
 volumes:
