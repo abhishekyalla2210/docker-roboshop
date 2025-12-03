@@ -1,14 +1,14 @@
-FROM node:20-alpine3.21 AS build
+FROM node:20
 WORKDIR /opt/server
 COPY server.js ./
 COPY package.json ./
 RUN npm install 
 
-FROM node:20-alpine3.21
-WORKDIR /opt/server
+# FROM node:20-alpine3.21
+# WORKDIR /opt/server
 EXPOSE 8080
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
-COPY --from=build --chown=roboshop:roboshop /opt/server /opt/server 
+# COPY --from=build --chown=roboshop:roboshop /opt/server /opt/server 
 ENV  REDIS_HOST="redis" \
      CATALOGUE_HOST="catalogue" \
      CATALOGUE_PORT="8080"
