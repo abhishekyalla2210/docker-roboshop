@@ -1,4 +1,4 @@
-FROM maven:3.9.11 AS builder
+FROM maven:3.9.11 AS build
 
 
 
